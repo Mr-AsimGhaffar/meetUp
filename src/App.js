@@ -7,15 +7,10 @@ function App() {
   return (
     <div>
       <Routes>
-      <Route path='/' exact element={<AllMeetupsPage />}/>
-        
-     
-      <Route path='/new-meetup' element={<NewMeetupPage />}/>
-      
-     
-      <Route path='/favorites'  element={<FavoritesPage />}/>
-        
-        </Routes>
+        <Route path='/' exact element={<AllMeetupsPage />} />
+        <Route path='/new-meetup' element={<NewMeetupPage />} />
+        <Route path='/favorites' element={<FavoritesPage />} />
+      </Routes>
     </div>
   )
 }
