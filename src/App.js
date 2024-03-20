@@ -1,9 +1,21 @@
-import React from 'react'
+import { Route, Routes } from 'react-router-dom';
+import AllMeetupsPage from './pages/AllMeetups';
+import NewMeetupPage from './pages/NewMeetups';
+import FavoritesPage from './pages/Favorites';
 
 function App() {
   return (
     <div>
-      Hello
+      <Routes>
+      <Route path='/' exact element={<AllMeetupsPage />}/>
+        
+     
+      <Route path='/new-meetup' element={<NewMeetupPage />}/>
+      
+     
+      <Route path='/favorites'  element={<FavoritesPage />}/>
+        
+        </Routes>
     </div>
   )
 }
