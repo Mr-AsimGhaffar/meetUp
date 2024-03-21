@@ -1,19 +1,23 @@
-import classes from './MeetupList.module.css'
+import Card from '../ui/Card';
+import classes from './MeetupItem.module.css'
 function MeetupItem(props) {
-    return (<li>
-        <div>
-            <img className={classes.image} src={props.image} alt={props.tittle} />
+    return (
+        <li className={classes.item}>
+            <Card>
+        <div className={classes.image}>
+            <img src={props.image} alt={props.tittle} />
         </div>
-        <div>
+        <div className={classes.content}>
             <h3>{props.tittle}</h3>
             <address>{props.address}</address>
-            <p>{props.address}</p>
+            <p>{props.description}</p>
         </div>
-        <div>
+        <div className={classes.actions}>
             <button>To Favorites</button>
         </div>
-  </li>
+            </Card>
+        </li>
   )
 }
 
-export default MeetupItem
+export default MeetupItem;
